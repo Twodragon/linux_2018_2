@@ -54,12 +54,18 @@ asmlinkage long sys_get_user(const char* surname, unsigned int len, struct user_
     }
     set_fs(old_fs);
 
-    sscanf(answer, "GOT!\nname: %s\nsurname: %s\nage: %s\nphone_number: %s\nmail_address: %s\n",
+    if (strncmp("GOT", answer, 3) == 0){
+    	sscanf(answer, "GOT!\nname: %s\nsurname: %s\nage: %s\nphone_number: %s\nmail_address: %s\n",
            output_data->name,
            output_data->surname,
            output_data->age,
            output_data->phone_number,
            output_data->mail_address);
+    }
+    else if (strncmp("COULD NOT GET", answer, 13) {
+	sprintf(output_data->name, "none")
+    }
+
     fclose(f);
     kfree(command);
     return 0;

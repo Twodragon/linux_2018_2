@@ -1,0 +1,18 @@
+#!/bin/bash
+
+phonebook/start
+
+gcc -o test test.c
+
+test | tail
+ 
+if [ $? -eq 0 ] 
+then
+    echo "success"
+else
+    echo "failed"
+fi
+
+rm test
+
+phonebook/finish

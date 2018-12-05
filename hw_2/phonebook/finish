@@ -1,0 +1,1 @@
+#!/bin/bashsudo rmmod phone_booksudo rm /dev/phone_book
