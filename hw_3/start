@@ -1,0 +1,1 @@
+#!/bin/bashmakeoutput=$(make test | grep "device major number")$splitted_arrayIFS=' ' read -r -a splitted_array <<< "$output"maj_number=${splitted_array[-1]}sudo mknod /dev/keylogger c $maj_number 0
