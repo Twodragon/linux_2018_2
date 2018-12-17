@@ -1,1 +1,4 @@
-#!/bin/bashsudo rmmod keyloggersudo rm /dev/keylogger
+#!/bin/bash
+
+sudo rmmod keylogger
+sudo rm /dev/keylogger
